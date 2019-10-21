@@ -13,9 +13,7 @@ import UIKit
 //создание класса Автомобиль
 
 class Cars {
-    
     //свойства
-    
     //1 - марка
     var markAuto: String = ""
     //2 - словарь
@@ -24,19 +22,21 @@ class Cars {
     var yearAuto: Int = 0
     //4 - количество автомобилей
     var kolichastoAuto: Int = 0
-    
-    
-    
+
     func addToDictionaryAuto() {
         dictAuto[5] = "Альберт"
     }
     
     func printToConsole() {
-        print("\(String(describing: dictAuto[1]))")
+        for (key,value) in nameDictionary {
+            print("Это \(value.name)")
+        }
     }
     
 }
 
+let car: Cars = Cars()
+car.addToDictionaryAuto()
 
 
 class Vladelec: Cars {
@@ -52,5 +52,4 @@ class Vladelec: Cars {
 let vladelec: Vladelec = Vladelec()
 vladelec.Vladelec(name: "Владелец 1", categoryNY: "ыва")
 
-print("\(vladelec.name) \(vladelec.categoryVY)")
 
